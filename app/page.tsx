@@ -1,5 +1,5 @@
 const examples = [
-  { src: "/stereo-clouds-low.png", label: "Clouds over forest", title: "Clouds become objects", body: "Separate cloud layers float at different heights above the ground." },
+  { src: "/stereo-clouds-low.jpg", label: "Clouds over forest", title: "Clouds become objects", body: "Separate cloud layers float at different heights above the ground." },
   { src: "/stereo-clouds-high.png", label: "Cloudscape from an aircraft", title: "Depth across kilometres", body: "A moving aircraft creates a baseline wide enough to reveal the immense shape of a cloudscape." },
   { src: "/stereo-islands.png", label: "Islands seen from an aircraft", title: "Landscape at its real scale", body: "Islands, coastlines and haze separate into spatial layers instead of collapsing into one flat image." },
   { src: "/stereo-golf.png", label: "Golf course seen from an aircraft", title: "The ground gains relief", body: "Fields, forests and buildings settle into a miniature-like—but entirely natural—depth map." },
@@ -11,7 +11,7 @@ export default function Home() {
     <main id="top">
       <section className="hero section-shell">
         <div className="hero-copy"><p className="eyebrow">A camera with a wider pair of eyes</p><h1>The world is<br /><em>deeper than it looks.</em></h1><p className="lede">Stereogrammy turns the distance you travel into stereoscopic depth—revealing clouds and landscapes as immense objects in real space.</p><div className="hero-actions"><a className="button" href="#experience">See it in 3D</a><span>One camera · Two moments · An enormous baseline</span></div></div>
-        <figure className="hero-stereo"><img src="/stereo-clouds-low.png" alt="A cross-eye stereoscopic pair of clouds floating above a forest" /><figcaption><span>Cross your eyes gently</span><span>Merge the two frames into a third image</span></figcaption></figure>
+        <figure className="hero-stereo"><img src="/stereo-clouds-low.jpg" alt="A cross-eye stereoscopic pair of clouds floating above a forest" /><figcaption><span>Cross your eyes gently</span><span>Merge the two frames into a third image</span></figcaption></figure>
       </section>
       <section className="manifesto" id="experience"><p className="eyebrow">Clouds aren’t a backdrop</p><h2>They are immense objects<br />scattered through space.</h2><p>Your eyes are only centimetres apart. At the scale of a landscape, almost everything appears flat. But take two photographs hundreds of metres apart and depth suddenly returns.</p></section>
       <section className="scroll-depth" aria-label="A scrolling illustration of depth between clouds">

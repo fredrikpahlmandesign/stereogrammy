@@ -16,11 +16,11 @@ test("renders the wide-baseline product story", async () => {
   assert.match(html, /Stereogrammy — Turn movement into depth/);
   assert.match(html, /The world is/);
   assert.match(html, /Clouds aren’t a backdrop/);
-  assert.match(html, /stereo-clouds-low\.png/);
+  assert.match(html, /stereo-clouds-low\.jpg/);
   assert.match(html, /scroll-depth/);
   assert.doesNotMatch(html, /codex-preview|Building your site/);
 });
 
 test("ships every photographic stereo example", async () => {
-  for (const name of ["stereo-clouds-low.png", "stereo-clouds-high.png", "stereo-islands.png", "stereo-golf.png", "stereo-airport.png"]) await access(new URL(`../public/${name}`, import.meta.url));
+  for (const name of ["stereo-clouds-low.jpg", "stereo-clouds-high.png", "stereo-islands.png", "stereo-golf.png", "stereo-airport.png"]) await access(new URL(`../public/${name}`, import.meta.url));
 });
