@@ -1,0 +1,17 @@
+export const metadata = { title: "Privacy Policy — Stereogrammy", description: "Privacy policy for the Stereogrammy iPhone app." };
+
+export default function Privacy() {
+  return <main className="policy">
+    <a className="back" href="/">← Stereogrammy</a><p className="eyebrow">Plain language privacy</p><h1>Privacy Policy</h1><p className="policy-date">Effective date: 7 September 2026</p>
+    <p>Stereogrammy is a stereoscopic camera app made by Fredrik Påhlman. It is designed to need as little of your data as possible: no account, no advertising, no analytics, and no tracking across other apps or websites.</p>
+    <h2>Your photographs stay yours</h2><p>Photographs, capture sequences, and editing settings are stored locally on your device. Stereogrammy does not upload them to us. The app writes a finished photograph to your photo library only when you explicitly choose to save it.</p>
+    <h2>Camera and photo library</h2><p>Camera access is used to capture photographs for stereoscopic images. Add-only photo-library access is requested when you choose Save to Photos or capture a single photo. Images are processed on your device.</p>
+    <h2>Optional location</h2><p>Location access is not requested at first launch. If you explicitly select Auto Detect, the app uses speed and altitude on the device to adapt its capture guidance. Location information is not retained, uploaded, sold, or shared. You can use the manual capture modes without granting location access.</p>
+    <h2>Motion sensors</h2><p>Device-motion information helps align captured frames. It is processed on your device as part of a capture and is not transmitted to us.</p>
+    <h2>Data collection and tracking</h2><p>Stereogrammy does not collect personal data and does not contain third-party advertising, analytics, or tracking SDKs.</p>
+    <h2>Your choices</h2><p>You can delete saved sequences from the in-app library. You can revoke camera, photo-library, or location access at any time in iOS Settings. Deleting the app removes its locally stored library and settings; photographs previously saved to Photos remain under your control there.</p>
+    <h2>Changes</h2><p>If the app’s data practices change, this policy will be updated and its effective date revised before the change takes effect.</p>
+    <h2>Contact</h2><p>Questions about this policy can be sent to <a href="mailto:fredrikande@gmail.com">fredrikande@gmail.com</a>.</p>
+    <hr /><footer>© 2026 Fredrik Påhlman</footer>
+  </main>;
+}
