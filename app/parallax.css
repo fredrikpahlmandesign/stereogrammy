@@ -1,0 +1,6 @@
+.scroll-depth { --scroll-depth: 0; }
+.scroll-depth .depth-cloud { animation: none; }
+.scroll-depth .depth-cloud-far { transform: translate3d(calc(6vw - var(--scroll-depth) * 14vw), calc(8vh - var(--scroll-depth) * 16vh), 0); }
+.scroll-depth .depth-cloud-mid { transform: translate3d(calc(-18vw + var(--scroll-depth) * 38vw), calc(22vh - var(--scroll-depth) * 46vh), 0); }
+.scroll-depth .depth-cloud-near { transform: translate3d(calc(35vw - var(--scroll-depth) * 80vw), calc(42vh - var(--scroll-depth) * 88vh), 0); }
+@media (prefers-reduced-motion: reduce) {.scroll-depth .depth-cloud-far,.scroll-depth .depth-cloud-mid,.scroll-depth .depth-cloud-near { transform: none; }}
