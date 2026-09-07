@@ -4,3 +4,13 @@
 .scroll-depth .depth-cloud-mid { transform: translate3d(calc(-18vw + var(--scroll-depth) * 38vw), calc(22vh - var(--scroll-depth) * 46vh), 0); }
 .scroll-depth .depth-cloud-near { transform: translate3d(calc(35vw - var(--scroll-depth) * 80vw), calc(42vh - var(--scroll-depth) * 88vh), 0); }
 @media (prefers-reduced-motion: reduce) {.scroll-depth .depth-cloud-far,.scroll-depth .depth-cloud-mid,.scroll-depth .depth-cloud-near { transform: none; }}
+
+.stereo-frame { position: relative; overflow: hidden; }
+.wiggle-view { position: absolute; inset: clamp(.4rem,1vw,.8rem); display: none; background-repeat: no-repeat; background-size: 200% 100%; background-position: left center; }
+.wiggle-view.show-right { background-position: right center; }
+.stereo-frame.is-wiggling > img { visibility: hidden; }
+.stereo-frame.is-wiggling .wiggle-view { display: block; }
+.wiggle-button { margin-top: .85rem; padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: transparent; font: 650 .78rem var(--font-sans),sans-serif; cursor: pointer; }
+.wiggle-button:hover,.wiggle-button.is-active { color: white; background: var(--ink); }
+.hero-stereo > .stereo-frame { padding: 0; }
+.hero-stereo > .stereo-frame .wiggle-view { inset: clamp(7px,1vw,13px); }
