@@ -1,46 +1,30 @@
-const steps = [
-  ["01", "Capture", "Hold the shutter and move sideways. Gentle haptics mark every frame."],
-  ["02", "See it", "Release, relax your eyes, and the scene opens into real depth."],
-  ["03", "Keep it", "Save a paper-mounted stereo card to Photos or share it anywhere."],
+const examples = [
+  { src: "/stereo-clouds-low.png", label: "Clouds over forest", title: "Clouds become objects", body: "Separate cloud layers float at different heights above the ground." },
+  { src: "/stereo-clouds-high.png", label: "Cloudscape from an aircraft", title: "Depth across kilometres", body: "A moving aircraft creates a baseline wide enough to reveal the immense shape of a cloudscape." },
+  { src: "/stereo-islands.png", label: "Islands seen from an aircraft", title: "Landscape at its real scale", body: "Islands, coastlines and haze separate into spatial layers instead of collapsing into one flat image." },
+  { src: "/stereo-golf.png", label: "Golf course seen from an aircraft", title: "The ground gains relief", body: "Fields, forests and buildings settle into a miniature-like—but entirely natural—depth map." },
 ];
 
 export default function Home() {
   return <>
-    <header className="site-header">
-      <a className="brand" href="#top">Stereogrammy</a>
-      <nav aria-label="Primary navigation"><a href="#how">How it works</a><a href="#modes">Capture modes</a><a href="/privacy">Privacy</a></nav>
-      <span className="status-pill">Coming to iPhone</span>
-    </header>
+    <header className="site-header"><a className="brand" href="#top">Stereogrammy</a><nav aria-label="Primary navigation"><a href="#experience">Experience it</a><a href="#how">How it works</a><a href="#capture">Capture</a><a href="/privacy">Privacy</a></nav><span className="status-pill">Coming to iPhone</span></header>
     <main id="top">
       <section className="hero section-shell">
-        <div className="hero-copy">
-          <p className="eyebrow">Stereoscopic camera for iPhone</p>
-          <h1>Two moments.<br /><em>One deeper view.</em></h1>
-          <p className="lede">Stereogrammy turns a smooth sideways movement into a true stereoscopic photograph—ready to view with parallel or cross-eye vision.</p>
-          <div className="hero-actions"><a className="button" href="#how">See how it works</a><span>Free · No account · No tracking</span></div>
-        </div>
-        <div className="stereo-window" aria-label="Two matching views form one stereoscopic scene">
-          <div className="eye eye-left"><span className="cloud cloud-small" /><span className="horizon" /><span className="cloud cloud-large" /></div>
-          <div className="eye eye-right"><span className="cloud cloud-small" /><span className="horizon" /><span className="cloud cloud-large" /></div>
-          <div className="depth-mark"><span /><span /></div>
-        </div>
+        <div className="hero-copy"><p className="eyebrow">A camera with a wider pair of eyes</p><h1>The world is<br /><em>deeper than it looks.</em></h1><p className="lede">Stereogrammy turns the distance you travel into stereoscopic depth—revealing clouds and landscapes as immense objects in real space.</p><div className="hero-actions"><a className="button" href="#experience">See it in 3D</a><span>One camera · Two moments · An enormous baseline</span></div></div>
+        <figure className="hero-stereo"><img src="/stereo-clouds-low.png" alt="A cross-eye stereoscopic pair of clouds floating above a forest" /><figcaption><span>Cross your eyes gently</span><span>Merge the two frames into a third image</span></figcaption></figure>
       </section>
-      <section className="stereo-statement"><p>Left eye</p><strong>Look between the pictures.</strong><p>Right eye</p></section>
-      <section className="how section-shell" id="how">
-        <div className="section-intro"><p className="eyebrow">A camera with a baseline</p><h2>Move the phone.<br />Keep looking straight.</h2><p>Stereogrammy records a short sequence, finds a useful pair, and presents it immediately. The automatic result is the main event; careful controls stay nearby when you want them.</p></div>
-        <div className="steps">{steps.map(([number,title,body]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
+      <section className="manifesto" id="experience"><p className="eyebrow">Clouds aren’t a backdrop</p><h2>They are immense objects<br />scattered through space.</h2><p>Your eyes are only centimetres apart. At the scale of a landscape, almost everything appears flat. But take two photographs hundreds of metres apart and depth suddenly returns.</p></section>
+      <section className="scroll-depth" aria-label="A scrolling illustration of depth between clouds">
+        <div className="depth-stage"><div className="depth-sky" /><span className="depth-cloud depth-cloud-far" /><span className="depth-cloud depth-cloud-mid" /><span className="depth-cloud depth-cloud-near" /><div className="depth-caption"><p className="eyebrow">Move through the scene</p><h2>Scroll turns distance<br />into separation.</h2><p>As your viewpoint travels, nearby forms shift faster than distant ones. That parallax is the raw material of stereoscopic depth.</p></div></div>
       </section>
-      <section className="paper-section" id="modes">
-        <div className="paper-card"><div className="sample-pair" aria-hidden="true"><div /><div /></div><div className="signature">◉ Created with Stereogrammy · September 2026</div></div>
-        <div className="paper-copy"><p className="eyebrow">Made to be kept</p><h2>A small stereo print, from your camera roll.</h2><p>Every export arrives mounted on warm, lightly textured paper, with room to let the two images breathe.</p><ul><li>Parallel and cross-eye viewing</li><li>Automatic pair selection and alignment</li><li>Optional convergence and frame controls</li><li>Local library for later viewing</li></ul></div>
-      </section>
-      <section className="modes section-shell">
-        <p className="eyebrow">On foot by default</p><h2>The right guidance for the way you move.</h2>
-        <div className="mode-grid"><article><b>Walk</b><span>Take one smooth sideways step.</span></article><article><b>Train</b><span>Let the carriage become your camera rail.</span></article><article><b>Flight</b><span>Turn takeoff and landing into vast stereo baselines.</span></article><article><b>Auto</b><span>Optional, on-device motion guidance. Location is requested only when selected.</span></article></div>
-      </section>
-      <section className="maker section-shell"><p className="eyebrow">Who made it</p><h2>Designed in Sweden.<br />Built for curious eyes.</h2><p>Stereogrammy is designed and built by <a href="https://fredrikpahlmandesign.github.io/">Fredrik Påhlman</a>. It is a sibling to <a href="https://fredrikpahlmandesign.github.io/linelift-site/">Line Lift</a>: tactile, focused, and respectful of your work.</p></section>
-      <section className="final-cta"><p className="eyebrow">Stereogrammy</p><h2>See more than one moment can hold.</h2><p>Coming soon to the App Store for iPhone.</p><span className="button button-muted">App Store release in preparation</span></section>
+      <section className="baseline section-shell" id="how"><div><p className="eyebrow">Turn movement into depth</p><h2>One lens.<br />Two moments.<br /><em>A vast stereo baseline.</em></h2></div><div className="baseline-explainer" aria-label="How movement creates a stereo baseline"><span className="moment">01</span><div className="travel-line"><i /></div><span className="moment">02</span><p>The vehicle moves</p><p>The subject barely does</p></div><p className="baseline-copy">Stereogrammy records a short sequence while you move, then finds two views that belong together. The automatic result comes first: aligned, comfortable and ready to enjoy in 3D.</p></section>
+      <section className="gallery section-shell"><div className="gallery-heading"><p className="eyebrow">Captured from a plane</p><h2>See distance, not just scenery.</h2><p>Every pair below was photographed through an aircraft window using a single camera. No depth sensor. No reconstruction. Just two real viewpoints.</p></div>{examples.map((example,index)=><figure className={`example example-${index+1}`} key={example.src}><div className="stereo-frame"><img src={example.src} alt={`Cross-eye stereo pair: ${example.label}`} /></div><figcaption><span>{String(index+1).padStart(2,"0")}</span><div><h3>{example.title}</h3><p>{example.body}</p></div></figcaption></figure>)}</section>
+      <section className="view-guide"><div className="section-shell"><p className="eyebrow">How to see it</p><h2>Let a third picture appear.</h2><div className="guide-steps"><article><b>1</b><p>Look between the two frames and gently cross your eyes.</p></article><article><b>2</b><p>Let the images drift until matching details overlap.</p></article><article><b>3</b><p>Hold the middle image softly. The scene will open into depth.</p></article></div><p className="gentle-note">If it feels strained, stop and relax your eyes. A smaller image is often easier at first.</p></div></section>
+      <section className="capture section-shell" id="capture"><div><p className="eyebrow">Built for the journey</p><h2>Point out the window.<br />Let motion do the rest.</h2><p>Choose Flight, Train or Car—or let Auto suggest guidance only when you ask it to. Stereogrammy helps select a useful pair while keeping the automatic result at the centre of the experience.</p></div><div className="capture-grid"><article><b>Hold to capture</b><span>A short sequence catches multiple possible baselines.</span></article><article><b>Enjoy it first</b><span>Review in parallel, cross-eye or gentle wiggle view.</span></article><article><b>Refine if needed</b><span>Convergence and alignment controls stay one level deeper.</span></article><article><b>Keep the moment</b><span>Save a paper-mounted stereo card directly to Photos.</span></article></div></section>
+      <section className="paper-section"><div className="paper-card"><img src="/stereo-airport.png" alt="Stereo photograph of an airport apron mounted on warm paper" /><div className="signature">◉ Created with Stereogrammy · September 2026</div></div><div className="paper-copy"><p className="eyebrow">Made to be kept</p><h2>A stereoscopic memory, not a computational effect.</h2><p>The finished pair is mounted on warm, lightly textured paper with generous edges—ready for your camera roll, a message or a print.</p></div></section>
+      <section className="maker section-shell"><p className="eyebrow">Made in Sweden</p><h2>For people who want to see how space really feels.</h2><p>Stereogrammy is designed and built by <a href="https://fredrikpahlmandesign.github.io/">Fredrik Påhlman</a>. Private by design: no account, no tracking, and your photographs stay on your device.</p></section>
+      <section className="final-cta"><p className="eyebrow">Stereogrammy for iPhone</p><h2>Borrow the distance you travel.<br />Give it to your eyes.</h2><p>Coming soon to the App Store.</p><span className="button button-muted">App Store release in preparation</span></section>
     </main>
-    <footer className="section-shell"><span>© 2026 Fredrik Påhlman</span><div><a href="/privacy">Privacy</a><a href="https://fredrikpahlmandesign.github.io/">More work</a></div></footer>
+    <footer className="section-shell"><span>© 2026 Fredrik Påhlman</span><div><a href="/privacy">Privacy</a><a href="https://fredrikpahlmandesign.github.io/linelift-site/">Line Lift</a><a href="https://fredrikpahlmandesign.github.io/">More work</a></div></footer>
   </>;
 }

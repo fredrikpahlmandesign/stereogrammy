@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
-  const title = "Stereogrammy — True 3D photos on iPhone";
-  const description = "Capture, view, refine, and share stereoscopic photographs on iPhone. No account and no tracking.";
+  const title = "Stereogrammy — Turn movement into depth";
+  const description = "Use the distance you travel to reveal clouds and landscapes in true stereoscopic depth. A wide-baseline 3D camera for iPhone.";
   return {
     title,
     description,
