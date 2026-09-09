@@ -6,11 +6,11 @@
 @media (prefers-reduced-motion: reduce) {.scroll-depth .depth-cloud-far,.scroll-depth .depth-cloud-mid,.scroll-depth .depth-cloud-near { transform: none; }}
 
 .stereo-frame { position: relative; overflow: hidden; }
-.wiggle-view { position: absolute; inset: clamp(.4rem,1vw,.8rem); display: none; background-repeat: no-repeat; background-size: 200% 100%; background-position: left center; }
+.wiggle-view { position: absolute; top: clamp(.4rem,1vw,.8rem); bottom: clamp(.4rem,1vw,.8rem); left: 25%; width: 50%; display: none; background-repeat: no-repeat; background-size: 200% 100%; background-position: left center; }
 .wiggle-view.show-right { background-position: right center; }
 .stereo-frame.is-wiggling > img { visibility: hidden; }
 .stereo-frame.is-wiggling .wiggle-view { display: block; }
 .wiggle-button { margin-top: .85rem; padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: transparent; font: 650 .78rem var(--font-sans),sans-serif; cursor: pointer; }
 .wiggle-button:hover,.wiggle-button.is-active { color: white; background: var(--ink); }
 .hero-stereo > .stereo-frame { padding: 0; }
-.hero-stereo > .stereo-frame .wiggle-view { inset: clamp(7px,1vw,13px); }
+.hero-stereo > .stereo-frame .wiggle-view { top: clamp(7px,1vw,13px); bottom: clamp(7px,1vw,13px); left: 25%; width: 50%; }
